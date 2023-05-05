@@ -5,6 +5,7 @@ const data = [
         classification: "Menor que 18,5",
         info: "Magreza",
         obesity: "",
+        tier: 1,
     },
 
     {
@@ -13,6 +14,7 @@ const data = [
         classification: "Entre 18,6 a 24,9",
         info: "Normal",
         obesity: "",
+        tier: 0,
     },
 
     {
@@ -21,14 +23,16 @@ const data = [
         classification: "Entre 30,0 a 34,9",
         info: "Sobrepeso",
         obesity: "",
+        tier: 2,
     },
 
     {
         min: 30,
         max: 34.9,
         classification: "Entre 30,0 a 34,9",
-        info: "Obesidade",
+        info: "Obesidade ",
         obesity: "I",
+        tier: 3,
     },
 
     {
@@ -37,14 +41,17 @@ const data = [
         classification: "Entre 35,0 a 39,9",
         info: "Obesidade",
         obesity: "II",
+        tier: 3,
+
     },
 
     {
         min: 40,
         max: 99,
         classification: "Maior que 40,0",
-        info: "Obesidade",
+        info: "Obesidade Grave",
         obesity: "III",
+        tier: 4,
     },
 ];
 
@@ -192,6 +199,7 @@ btnCalculator.addEventListener("click", (e) => {
     data.forEach((item) => {
         if (imc >= item.min && item.max) {
             info = item.info;
+            tier = item.tier;
             obesity = item.obesity;
         }
     });
@@ -199,6 +207,33 @@ btnCalculator.addEventListener("click", (e) => {
     imcNumberSpan.textContent = `${imc}`;
     imcInfoSpan.innerText = [info + " " + obesity];
 
+    switch (tier) {
+
+        case 0:
+            imcNumberSpan.classList.add("good");
+            imcInfoSpan.classList.add("good");
+            break;
+
+        case 1:
+            imcNumberSpan.classList.add("low");
+            imcInfoSpan.classList.add("low");
+            break;
+
+        case 2:
+            imcNumberSpan.classList.add("low");
+            imcInfoSpan.classList.add("low");
+            break;
+
+        case 3:
+            imcNumberSpan.classList.add("midium");
+            imcInfoSpan.classList.add("midium");
+            break;
+            
+        case 4:
+            imcNumberSpan.classList.add("high");
+            imcInfoSpan.classList.add("high");
+            break;
+    }
 });
 
 // Limpar inputs

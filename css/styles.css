@@ -24,7 +24,6 @@ body {
     height: 400px;
     min-width: 380px;
     padding: 1rem;
-    /* border: 1px solid red; */
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
 }
@@ -42,7 +41,6 @@ body {
 #form {
     display: flex;
     flex-direction: column;
-    /* border: 1px solid blue; */
 }
 
 .form-inputs {
@@ -50,7 +48,6 @@ body {
     flex-direction: column;
     gap: 0rem;
     margin-bottom: 1rem;
-    /* border: 1px solid green; */
 }
 
 .labels-box {
@@ -74,7 +71,6 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 1rem;
-    /* border: 1px solid red; */
 }
 
 .control-buttons button {
@@ -133,7 +129,7 @@ body {
     font-size: 14px;
 }
 
-.table-data {       
+.table-data {
     border: 1px solid rgb(187, 183, 183);
 }
 
@@ -161,6 +157,18 @@ body {
     font-size: 1rem;
 }
 
-.red {
-    color: red;
+.good {
+    color: #12db34;
+}
+
+.low {
+    color: #dbce12;
+}
+
+.midium {
+    color: #ff6600;
+}
+
+.high {
+    color: #db1912;
 }
