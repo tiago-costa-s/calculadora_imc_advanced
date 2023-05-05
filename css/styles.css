@@ -70,17 +70,14 @@ body {
     border: 0;
 }
 
-.control-inputs {
-    margin-top: 1rem;
-}
-
-.control-inputs {
+.control-buttons {
     display: flex;
     justify-content: space-between;
+    margin-top: 1rem;
     /* border: 1px solid red; */
 }
 
-.control-inputs button {
+.control-buttons button {
     width: calc(50% - .3rem);
     padding: 1rem 0;
     border-radius: 5px;
@@ -89,17 +86,17 @@ body {
     font-weight: bold;
 }
 
-.control-inputs #btn-calculator {
+.control-buttons #btn-calculator {
     background-color: rgb(77, 238, 163);
 }
 
-.control-inputs #btn-reset {
+.control-buttons #btn-reset {
     background-color: rgb(238, 123, 77);
 }
 
 /* Tabela de Resultados */
 #form-result {
-    display: flex;
+    display: none;
 }
 
 #result {

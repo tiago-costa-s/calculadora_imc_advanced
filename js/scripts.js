@@ -11,7 +11,7 @@ const data = [
         min: 18.6,
         max: 24.9,
         classification: "Entre 18,6 a 24,9",
-        info: "normal",
+        info: "Normal",
         obesity: "",
     },
 
@@ -20,9 +20,16 @@ const data = [
         max: 29.9,
         classification: "Entre 30,0 a 34,9",
         info: "Sobrepeso",
-        obesity: "I",
+        obesity: "",
     },
 
+    {
+        min: 30,
+        max: 34.9,
+        classification: "Entre 30,0 a 34,9",
+        info: "Sobrepeso",
+        obesity: "I",
+    },
 
     {
         min: 35,
@@ -41,9 +48,6 @@ const data = [
     },
 ];
 
-
-
-
 // Seleções de inputs
 const inputWeight = document.querySelector("#weight");
 const inputHeight = document.querySelector("#height");
@@ -56,7 +60,6 @@ const btnReturn = document.querySelector(".bi bi-arrow-return-left");
 // Seleção de elementos
 const formResult = document.querySelector("#form-result");
 
-
 //  ---------------------- Funções ----------------------
 // Calcula o imc
 function calcImc(height, weight) {
@@ -64,12 +67,13 @@ function calcImc(height, weight) {
     return imc;
 }
 
-
-
 let imcNumberSpan;
 let imcInfoSpan;
 
 function createTable() {
+    formResult.innerHTML = "";
+    formResult.style.display = "flex";
+
     // Cria o elemento "result" que mostra o IMC e a classificação
     const resultIMC = document.createElement("div");
     resultIMC.id = "result";
@@ -124,7 +128,7 @@ function createTable() {
     // Adiciona as linhas de dados na tabela
     data.forEach((item) => {
         console.log(item.info);
-        imcInfoSpan.textContent = `${item.info} ${item.obesity}`
+        // imcInfoSpan.textContent = `${item.info} ${item.obesity}`
 
         const tr = document.createElement("tr");
         tr.classList.add("table-data");
@@ -156,13 +160,18 @@ function createTable() {
 
     // Adiciona o table-body dentro do table
     table.appendChild(tBody);
-}
 
+    // Criando o botão 
+    const controlButton = document.createElement("div");
+    controlButton.id = "control-button-result";
+    formResult.appendChild(controlButton);
+}
 
 // Limpar inputs
 function clearInputs() {
     inputWeight.value = "";
     inputHeight.value = "";
+    formResult.style.display = "none";
 }
 
 // ---------------------- Eventos -----------------------
@@ -179,7 +188,17 @@ btnCalculator.addEventListener("click", (e) => {
     console.log("Teste 2: " + imc);
 
     createTable();
+
+    data.forEach((item) => {
+        if (imc >= item.min && item.max) {
+            info = item.info;
+            obesity = item.obesity;
+        }
+    });
+
     imcNumberSpan.textContent = `${imc}`;
+    imcInfoSpan.innerText = [info + " " + obesity];
+
 });
 
 // Limpar inputs
