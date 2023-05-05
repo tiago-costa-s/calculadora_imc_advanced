@@ -10,7 +10,8 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
     min-height: 100vh;
     background-color: rgb(224, 223, 223);
 }
@@ -20,18 +21,20 @@ body {
     flex-direction: column;
     justify-content: center;
     width: 400px;
-    height: 450px;
+    height: 400px;
+    min-width: 380px;
     padding: 1rem;
     /* border: 1px solid red; */
     border-radius: 10px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
 #form-container {
     /* border: 1px solid red; */
 }
 
-#form-container h3 {
+.container h2 {
+    font-size: 1.4rem;
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -63,22 +66,104 @@ body {
 
 .form-inputs input {
     padding: 1rem .5rem;
+    background-color: rgb(231, 231, 231);
+    border: 0;
 }
 
 .control-inputs {
     margin-top: 1rem;
 }
 
-
 .control-inputs {
     display: flex;
     justify-content: space-between;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .control-inputs button {
-    display: flex;
+    width: calc(50% - .3rem);
     padding: 1rem 0;
-    align-self: baseline;
-   
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.control-inputs #btn-calculator {
+    background-color: rgb(77, 238, 163);
+}
+
+.control-inputs #btn-reset {
+    background-color: rgb(238, 123, 77);
+}
+
+/* Tabela de Resultados */
+#form-result {
+    display: flex;
+}
+
+#result {
+    margin-bottom: 1rem;
+}
+
+#result p {
+    font-weight: bold;
+    text-align: center;
+}
+
+#result #imc-number {
+    font-size: 1.5rem;
+    margin-bottom: .4rem;
+}
+
+#result #imc-info {
+    font-size: 1.rem;
+    color: rgb(104, 104, 104);
+}
+
+/* Table */
+#table {
+    border-collapse: collapse;
+    border: 1px solid rgb(187, 183, 183);
+}
+
+/* Head */
+.header-columns {
+    padding: .6rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgb(187, 183, 183);
+    font-weight: bolder;
+    font-size: 14px;
+}
+
+.table-data {       
+    border: 1px solid rgb(187, 183, 183);
+}
+
+.table-line {
+    padding: .5rem 1rem;
+    font-size: 12px;
+}
+
+.bi, .bi-arrow-return-left {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1rem;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.bi, i {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: blue;
+}
+
+.bi i, p {
+    font-size: 1rem;
+}
+
+.red {
+    color: red;
 }
