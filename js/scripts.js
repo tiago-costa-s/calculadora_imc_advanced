@@ -27,7 +27,7 @@ const data = [
         min: 30,
         max: 34.9,
         classification: "Entre 30,0 a 34,9",
-        info: "Sobrepeso",
+        info: "Obesidade",
         obesity: "I",
     },
 
