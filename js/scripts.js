@@ -1,8 +1,18 @@
 const data = [
+
     {
-        min: 0,
+        min: 1,
+        max: 16.4,
+        classification: "Menor que 16,0",
+        info: "Magresa ",
+        obesity: "(Grave)",
+        tier: 4,
+    },
+
+    {
+        min: 16.5,
         max: 18.5,
-        classification: "Menor que 18,5",
+        classification: "Entre 16.5 a 18,5",
         info: "Magreza",
         obesity: "",
         tier: 1,
@@ -49,10 +59,11 @@ const data = [
         min: 40,
         max: 99,
         classification: "Maior que 40,0",
-        info: "Obesidade Grave",
-        obesity: "III",
+        info: "Obesidade",
+        obesity: "III (Grave)",
         tier: 4,
     },
+
 ];
 
 // Seleções de inputs
@@ -196,6 +207,8 @@ btnCalculator.addEventListener("click", (e) => {
 
     createTable();
 
+    // Verifica se o IMC esta dentro de uma faixa caso atribui os valores de imc e a classificação 
+
     data.forEach((item) => {
         if (imc >= item.min && item.max) {
             info = item.info;
@@ -228,7 +241,7 @@ btnCalculator.addEventListener("click", (e) => {
             imcNumberSpan.classList.add("midium");
             imcInfoSpan.classList.add("midium");
             break;
-            
+
         case 4:
             imcNumberSpan.classList.add("high");
             imcInfoSpan.classList.add("high");
@@ -241,11 +254,3 @@ btnReset.addEventListener("click", (e) => {
     e.preventDefault();
     clearInputs();
 });
-
-
-// Testes
-
-
-
-
-
