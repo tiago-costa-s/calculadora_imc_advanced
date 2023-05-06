@@ -73,7 +73,6 @@ const inputHeight = document.querySelector("#height");
 // Seleções dos buttons
 const btnCalculator = document.querySelector("#btn-calculator");
 const btnReset = document.querySelector("#btn-reset");
-const btnReturn = document.querySelector(".bi bi-arrow-return-left");
 
 // Seleção de elementos
 const formResult = document.querySelector("#form-result");

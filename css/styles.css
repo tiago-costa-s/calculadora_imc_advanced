@@ -20,11 +20,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
+    min-width: 320px;
     height: 400px;
-    min-width: 380px;
     padding: 1rem;
     border-radius: 10px;
+    margin: 0 1rem;
     background-color: rgb(255, 255, 255);
 }
 
@@ -171,4 +173,14 @@ body {
 
 .high {
     color: #db1912;
+}
+
+
+@media(max-width: 450px) {
+    .container {   
+        min-width: auto;
+        height: 400px;
+        padding: 1rem;
+        margin: 1rem .5rem;      
+    }
 }
