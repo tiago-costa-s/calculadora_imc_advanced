@@ -14,6 +14,9 @@ No geral, estou muito satisfeito com o resultado final e aprendi muito ao longo 
 Se você quiser experimentar a Calculadora de IMC Advanced, pode acessá-la
 
 
+![](https://i.postimg.cc/jdpBRNB4/calc-imc-advanced.jpg)
+
+
 ## Tecnologias
 - HTML 5
 - CSS 3 (Flexbox, Designer Responsivo) 
