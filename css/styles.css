@@ -28,6 +28,8 @@ body {
     border-radius: 10px;
     margin: 0 1rem;
     background-color: rgb(255, 255, 255);
+    box-shadow: 0px 13px 7px 5px rgba(0,0,0,0.1);
+    
 }
 
 #form-container {
@@ -57,7 +59,7 @@ body {
     align-items: flex-end;
     gap: .3rem;
     margin-bottom: .5rem;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .labels-box p {
@@ -68,29 +70,41 @@ body {
     padding: 1rem .5rem;
     background-color: rgb(231, 231, 231);
     border: 0;
+    font-size: 16PX;
 }
 
 .control-buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;
+    margin-top: 1rem;    
 }
 
 .control-buttons button {
     width: calc(50% - .3rem);
     padding: 1rem 0;
-    border-radius: 5px;
-    border: 1px solid black;
+    border: 0;
+    border-radius: 5px;    
     cursor: pointer;
     font-weight: bold;
+    font-size: 14px;
+    opacity: .9; 
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.432);
 }
 
 .control-buttons #btn-calculator {
-    background-color: rgb(77, 238, 163);
+    background-color: rgb(77, 238, 163);    
 }
 
 .control-buttons #btn-reset {
     background-color: rgb(238, 123, 77);
+}
+
+.control-buttons #btn-calculator:hover {
+    opacity: 1;  
+}
+
+.control-buttons #btn-reset:hover {
+    opacity: 1;
 }
 
 /* Tabela de Resultados */
@@ -177,15 +191,16 @@ body {
 }
 
 
-@media(max-width: 450px) {
+@media (min-width: 350px) and (max-width: 450px) {
+
     .container {
         min-width: auto;
         height: 400px;
-        padding: 1rem;
+        padding: .5rem;
         margin: 1rem .5rem;
     }
 
-    .labels-box {      
+    .labels-box {
         font-size: 20px;
     }
 
@@ -199,6 +214,6 @@ body {
     }
 
     .table-line {
-        font-size: 14px;
+        font-size: 15px;
     }
 }
