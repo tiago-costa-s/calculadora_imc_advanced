@@ -1,9 +1,9 @@
-# Desenvolvimento da Calculadora de IMC Advanced
+# Calculadora de IMC Advanced
 
 Link: https://calculadora-imc-advanced.vercel.app/
 
 
-Olá pessoal! Gostaria de compartilhar com vocês um projeto que desenvolvi recentemente, a Calculadora de IMC Advanced.
+Olá pessoal! Gostaria de compartilhar com vocês um projeto que desenvolvi, a Calculadora de IMC Advanced.
 
 O objetivo da calculadora é calcular o índice de massa corporal ou IMC, que é uma medida que avalia a relação entre peso e altura de uma pessoa. Utilizando tecnologias como HTML, CSS (Flexbox), responsividade e JavaScript, eu fui capaz de criar uma calculadora totalmente funcional e responsiva.
 
@@ -16,5 +16,5 @@ Se você quiser experimentar a Calculadora de IMC Advanced, pode acessá-la
 
 ## Tecnologias
 - HTML 5
-- CSS 3 (Flexbox)
+- CSS 3 (Flexbox, Designer Responsivo) 
 - Java Script
