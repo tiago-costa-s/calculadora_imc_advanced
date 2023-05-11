@@ -100,6 +100,11 @@ function clearResults() {
     }
 }
 
+// Realiza a validação dos inputs e retira os caracteres especiais
+function validateValueInputs(text) {
+    return text.replace(/[^0-9,]/g, "");
+}
+
 // Cria o tamplate com o resultado.
 let imcNumberSpan;
 let imcInfoSpan;
@@ -249,6 +254,19 @@ function createResults() {
 }
 
 // Eventos 
+const inputs = [inputWeight, inputHeight];
+
+inputs.forEach((input) => {
+    input.addEventListener("input", clearResults);
+});
+
+inputs.forEach((el) => {
+    el.addEventListener("input", (e) => {
+        const updatedValue = validateValueInputs(e.target.value);
+        e.target.value = updatedValue;
+    })
+});
+
 btnCalculator.addEventListener("click", (e) => {
     if (!inputHeight.value || !inputWeight.value) return;
     e.preventDefault();
@@ -259,10 +277,4 @@ btnCalculator.addEventListener("click", (e) => {
 btnReset.addEventListener("click", (e) => {
     e.preventDefault();
     clearInputs();
-});
-
-const inputs = [inputWeight, inputHeight];
-
-inputs.forEach((input) => {
-    input.addEventListener("input", clearResults);
 });
