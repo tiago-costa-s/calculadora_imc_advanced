@@ -4,7 +4,7 @@ const data = [
         min: 1,
         max: 16.4,
         classification: "Menor que 16,0",
-        info: "Magresa ",
+        info: "Magreza ",
         obesity: "(Grave)",
         tier: 4,
     },
@@ -116,7 +116,7 @@ function createTable() {
     // Cria o imc-number 
     const imcNumberP = document.createElement("p");
     imcNumberP.id = "imc-number";
-    imcNumberP.textContent = "O seu IMC: ";
+    imcNumberP.textContent = "Seu IMC: ";
 
     // Cria o span e adiona dentro do imc-number
     imcNumberSpan = document.createElement("span");
@@ -126,7 +126,7 @@ function createTable() {
     // Cria "imc-info"
     const imcInfoP = document.createElement("p");
     imcInfoP.id = "imc-info";
-    imcInfoP.textContent = "Sua Classificação: ";
+    imcInfoP.textContent = "Classificação: ";
 
     imcInfoSpan = document.createElement("span");
     imcInfoSpan.textContent = data.info;

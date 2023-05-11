@@ -13,7 +13,7 @@ body {
     gap: 1rem;
     flex-wrap: wrap;
     min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.171);
+    background-color: rgba(0, 0, 0, 0.103);
 
 }
 
@@ -61,11 +61,11 @@ body {
     align-items: flex-end;
     gap: .3rem;
     margin-bottom: .5rem;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .labels-box p {
-    font-size: 12px;
+    font-size: .7rem;
 }
 
 .form-inputs input {
@@ -73,9 +73,8 @@ body {
     background-color: transparent;
     border: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.205);
-    font-size: 18px;
+    font-size: 1.1rem;
     font-weight: bold;
-    /* transition: 1000ms; */
     outline: 0;
     color: rgba(0, 0, 0, 0.74);
     transition: 500ms;
@@ -86,7 +85,7 @@ body {
 }
 
 .form-inputs input::placeholder {
-    font-size: 14px;
+    font-size: .8rem;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.384);
 }
@@ -95,11 +94,10 @@ input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px white inset;
 }
 
-
 .control-buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;
+    margin-top: 1rem;   
 }
 
 .control-buttons button {
@@ -109,9 +107,11 @@ input:-webkit-autofill {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 14px;
+    font-size: .8rem;
     opacity: .9;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.432);
+    color: white;
+    text-decoration: solid;
 }
 
 .control-buttons #btn-calculator {
@@ -150,7 +150,7 @@ input:-webkit-autofill {
 }
 
 #result #imc-info {
-    font-size: 1.rem;
+    font-size: 1rem;
     color: rgba(0, 0, 0, 0.61);
 }
 
@@ -166,7 +166,7 @@ input:-webkit-autofill {
     text-align: left;
     border-bottom: 1px solid rgba(0, 0, 0, 0.205);
     font-weight: bolder;
-    font-size: 14px;
+    font-size: .870rem;
 }
 
 .table-data {
@@ -175,14 +175,14 @@ input:-webkit-autofill {
 
 .table-line {
     padding: .5rem 1rem;
-    font-size: 12px;
+    font-size: .7rem;
 }
 
 .bi, .bi-arrow-return-left {
     display: flex;
     align-items: center;
     gap: .5rem;
-    font-size: 1rem;
+    font-size: .7rem;
     padding: .5rem;
     cursor: pointer;
 }
@@ -213,7 +213,6 @@ input:-webkit-autofill {
     color: #db1912;
 }
 
-
 @media (min-width: 350px) and (max-width: 450px) {
 
     .container {
@@ -224,19 +223,19 @@ input:-webkit-autofill {
     }
 
     .labels-box {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 
     .labels-box p {
-        font-size: 13px;
+        font-size: .8rem;
     }
 
     /* table */
     .header-columns {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .table-line {
-        font-size: 15px;
+        font-size: 1rem;
     }
 }
