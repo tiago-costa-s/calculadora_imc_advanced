@@ -13,6 +13,15 @@ No geral, estou muito satisfeito com o resultado final e aprendi muito ao longo 
 
 Se você quiser experimentar a Calculadora de IMC Advanced, pode acessá-la através do seu link acima.
 
+### Sobre recursos e funções
+
+- Botão "Resetar" executa a função de limpar os dados dos inputs(Altura e Peso) caso eles sejam apagados e também reseta o resultado da classificação e imc.
+- É possível limpar os dados dos inputs e do resultado quando o usuário apaga os dados de um dos inputs(Altura ou Peso).
+- Executa o cálculo de imc ao pressionar a tecla "Enter" quando um dos inputs (Altura ou Peso) estiver selecionado.
+- A tabela de resultados é criada de forma dinâmica através do Javascript.
+- A calculadora não executa as suas funções caso os campos estejam vazios.
+- Os inputs foram configurados através do javascript para não aceitarem letras e caracteres especiais.
+
 
 ![](https://i.postimg.cc/G3PT1M7G/calc-imc-advanced-0.png)
 
