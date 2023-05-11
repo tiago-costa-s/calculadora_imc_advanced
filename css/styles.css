@@ -13,7 +13,8 @@ body {
     gap: 1rem;
     flex-wrap: wrap;
     min-height: 100vh;
-    background-color: rgb(224, 223, 223);
+    background-color: rgba(0, 0, 0, 0.171);
+
 }
 
 .container {
@@ -24,12 +25,12 @@ body {
     max-width: 400px;
     min-width: 320px;
     height: 400px;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 10px;
     margin: 0 1rem;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0px 13px 7px 5px rgba(0,0,0,0.1);
-    
+    box-shadow: 0px 13px 7px 5px rgba(0, 0, 0, 0.1);
+
 }
 
 #form-container {
@@ -40,6 +41,7 @@ body {
     font-size: 1.4rem;
     text-align: center;
     margin-bottom: 2rem;
+    font-weight: 900;
 }
 
 #form {
@@ -63,44 +65,65 @@ body {
 }
 
 .labels-box p {
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .form-inputs input {
     padding: 1rem .5rem;
-    background-color: rgb(231, 231, 231);
+    background-color: transparent;
     border: 0;
-    font-size: 16PX;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+    font-size: 18px;
+    font-weight: bold;
+    /* transition: 1000ms; */
+    outline: 0;
+    color: rgba(0, 0, 0, 0.74);
+    transition: 500ms;
 }
+
+.form-inputs input:focus {
+    border-bottom: 1px solid rgb(3, 0, 0);
+}
+
+.form-inputs input::placeholder {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.384);
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
 
 .control-buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;    
+    margin-top: 1rem;
 }
 
 .control-buttons button {
     width: calc(50% - .3rem);
     padding: 1rem 0;
     border: 0;
-    border-radius: 5px;    
+    border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
     font-size: 14px;
-    opacity: .9; 
+    opacity: .9;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.432);
 }
 
 .control-buttons #btn-calculator {
-    background-color: rgb(77, 238, 163);    
+    background-color: rgb(77, 200, 238);
 }
 
 .control-buttons #btn-reset {
-    background-color: rgb(238, 123, 77);
+    background-color: rgb(238, 77, 77);
 }
 
 .control-buttons #btn-calculator:hover {
-    opacity: 1;  
+    opacity: 1;
 }
 
 .control-buttons #btn-reset:hover {
@@ -128,26 +151,26 @@ body {
 
 #result #imc-info {
     font-size: 1.rem;
-    color: rgb(104, 104, 104);
+    color: rgba(0, 0, 0, 0.61);
 }
 
 /* Table */
 #table {
     border-collapse: collapse;
-    border: 1px solid rgb(187, 183, 183);
+    border: 1px solid rgba(0, 0, 0, 0.205);
 }
 
 /* Head */
 .header-columns {
     padding: .6rem 1rem;
     text-align: left;
-    border-bottom: 1px solid rgb(187, 183, 183);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.205);
     font-weight: bolder;
     font-size: 14px;
 }
 
 .table-data {
-    border: 1px solid rgb(187, 183, 183);
+    border: 1px solid rgba(0, 0, 0, 0.205);
 }
 
 .table-line {

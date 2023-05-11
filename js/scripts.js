@@ -77,13 +77,31 @@ const btnReset = document.querySelector("#btn-reset");
 // Seleção de elementos
 const formResult = document.querySelector("#form-result");
 
-//  ---------------------- Funções ----------------------
+
+// Funções 
+
 // Calcula o imc
 function calcImc(height, weight) {
     const imc = (weight / (height * height)).toFixed(1);
     return imc;
 }
 
+// Limpar inputs
+function clearInputs() {
+    inputWeight.value = "";
+    inputHeight.value = "";
+    formResult.style.display = "none";
+}
+
+// Limpa os dados do resultado ao apagar os valores dos inputs.
+function clearResults() {
+    if (inputWeight.value === "" || inputHeight.value === "") {
+        formResult.innerHTML = "";
+        formResult.style.display = "none";
+    }
+}
+
+// Cria o tamplate com o resultado.
 let imcNumberSpan;
 let imcInfoSpan;
 
@@ -144,7 +162,6 @@ function createTable() {
 
     // Adiciona as linhas de dados na tabela
     data.forEach((item) => {
-        console.log(item.info);
         // imcInfoSpan.textContent = `${item.info} ${item.obesity}`
 
         const tr = document.createElement("tr");
@@ -184,17 +201,7 @@ function createTable() {
     formResult.appendChild(controlButton);
 }
 
-// Limpar inputs
-function clearInputs() {
-    inputWeight.value = "";
-    inputHeight.value = "";
-    formResult.style.display = "none";
-}
-
-// ---------------------- Eventos -----------------------
-btnCalculator.addEventListener("click", (e) => {
-    e.preventDefault();
-
+function tiago() {
     const weight = +inputWeight.value.replace(",", ".");
     const height = +inputHeight.value.replace(",", ".");
 
@@ -202,14 +209,8 @@ btnCalculator.addEventListener("click", (e) => {
 
     const imc = calcImc(height, weight);
 
-    console.log("Teste 2: " + imc);
-
-    createTable();
-
-    // Verifica se o IMC esta dentro de uma faixa caso atribui os valores de imc e a classificação 
-
     data.forEach((item) => {
-        if (imc >= item.min && item.max) {
+        if (imc >= item.min && imc <= item.max) {
             info = item.info;
             tier = item.tier;
             obesity = item.obesity;
@@ -246,10 +247,23 @@ btnCalculator.addEventListener("click", (e) => {
             imcInfoSpan.classList.add("high");
             break;
     }
+}
+
+// Eventos 
+btnCalculator.addEventListener("click", (e) => {
+    if (!inputHeight.value || !inputWeight.value) return;
+    e.preventDefault();
+    createTable();
+    tiago();
 });
 
-// Limpar inputs
 btnReset.addEventListener("click", (e) => {
     e.preventDefault();
     clearInputs();
+});
+
+const inputs = [inputWeight, inputHeight];
+
+inputs.forEach((input) => {
+    input.addEventListener("input", clearResults);
 });
