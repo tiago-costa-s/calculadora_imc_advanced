@@ -166,8 +166,6 @@ function createTable() {
 
     // Adiciona as linhas de dados na tabela
     data.forEach((item) => {
-        // imcInfoSpan.textContent = `${item.info} ${item.obesity}`
-
         const tr = document.createElement("tr");
         tr.classList.add("table-data");
 
