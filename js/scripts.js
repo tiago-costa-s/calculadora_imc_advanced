@@ -77,7 +77,6 @@ const btnReset = document.querySelector("#btn-reset");
 // Seleção de elementos
 const formResult = document.querySelector("#form-result");
 
-
 // Funções 
 
 // Calcula o imc
@@ -86,7 +85,7 @@ function calcImc(height, weight) {
     return imc;
 }
 
-// Limpar inputs
+// Limpa os inputs
 function clearInputs() {
     inputWeight.value = "";
     inputHeight.value = "";
@@ -201,7 +200,7 @@ function createTable() {
     formResult.appendChild(controlButton);
 }
 
-function tiago() {
+function createResults() {
     const weight = +inputWeight.value.replace(",", ".");
     const height = +inputHeight.value.replace(",", ".");
 
@@ -254,7 +253,7 @@ btnCalculator.addEventListener("click", (e) => {
     if (!inputHeight.value || !inputWeight.value) return;
     e.preventDefault();
     createTable();
-    tiago();
+    createResults();
 });
 
 btnReset.addEventListener("click", (e) => {

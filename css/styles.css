@@ -1,3 +1,9 @@
+:root {
+    --color-white: #ffffff;
+    --color-black-light: #00000034;
+    --color-black-average: #000000bd;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,8 +19,7 @@ body {
     gap: 1rem;
     flex-wrap: wrap;
     min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.103);
-
+    background-color: #0000001a;
 }
 
 .container {
@@ -28,13 +33,9 @@ body {
     padding: 2rem;
     border-radius: 10px;
     margin: 0 1rem;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 13px 7px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-white);
+    box-shadow: 0px 13px 7px 5px var(--color-black-light);
 
-}
-
-#form-container {
-    /* border: 1px solid red; */
 }
 
 .container h2 {
@@ -72,22 +73,22 @@ body {
     padding: 1rem .5rem;
     background-color: transparent;
     border: 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+    border-bottom: 1px solid var(--color-black-light);
     font-size: 1.1rem;
     font-weight: bold;
     outline: 0;
-    color: rgba(0, 0, 0, 0.74);
+    color: #000000bd;
     transition: 500ms;
 }
 
 .form-inputs input:focus {
-    border-bottom: 1px solid rgb(3, 0, 0);
+    border-bottom: 1px solid #030000;
 }
 
 .form-inputs input::placeholder {
     font-size: .8rem;
     font-weight: 500;
-    color: rgba(0, 0, 0, 0.384);
+    color: #00000062;
 }
 
 input:-webkit-autofill {
@@ -97,7 +98,7 @@ input:-webkit-autofill {
 .control-buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;   
+    margin-top: 1rem;
 }
 
 .control-buttons button {
@@ -109,8 +110,8 @@ input:-webkit-autofill {
     font-weight: bold;
     font-size: .8rem;
     opacity: .9;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.432);
-    color: white;
+    box-shadow: 1px 1px 1px 1px var(--color-black-light);
+    color: var(--color-white);
     text-decoration: solid;
 }
 
@@ -151,26 +152,26 @@ input:-webkit-autofill {
 
 #result #imc-info {
     font-size: 1rem;
-    color: rgba(0, 0, 0, 0.61);
+    color: #0000009c;
 }
 
 /* Table */
 #table {
     border-collapse: collapse;
-    border: 1px solid rgba(0, 0, 0, 0.205);
+    border: 1px solid var(--color-black-light);
 }
 
 /* Head */
 .header-columns {
     padding: .6rem 1rem;
     text-align: left;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+    border-bottom: 1px solid var(--color-black-light);
     font-weight: bolder;
     font-size: .870rem;
 }
 
 .table-data {
-    border: 1px solid rgba(0, 0, 0, 0.205);
+    border: 1px solid var(--color-black-light);
 }
 
 .table-line {
@@ -190,7 +191,7 @@ input:-webkit-autofill {
 .bi, i {
     font-size: 1.5rem;
     font-weight: bold;
-    color: blue;
+    color: #0000ff;
 }
 
 .bi i, p {
