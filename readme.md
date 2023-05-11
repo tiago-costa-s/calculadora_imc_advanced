@@ -11,7 +11,7 @@ Durante o desenvolvimento do projeto, um dos principais desafios que enfrentei f
 
 No geral, estou muito satisfeito com o resultado final e aprendi muito ao longo do processo de desenvolvimento. Espero que essa calculadora seja útil para quem precisar calcular seu IMC de maneira fácil e rápida.
 
-Se você quiser experimentar a Calculadora de IMC Advanced, pode acessá-la
+Se você quiser experimentar a Calculadora de IMC Advanced, pode acessá-la através do seu link acima.
 
 
 ![](https://i.postimg.cc/G3PT1M7G/calc-imc-advanced-0.png)
