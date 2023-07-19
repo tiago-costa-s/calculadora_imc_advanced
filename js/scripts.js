@@ -60,7 +60,7 @@ const data = [
         max: 99,
         classification: "Maior que 40,0",
         info: "Obesidade",
-        obesity: "III (Grave) Cuidado",
+        obesity: "III (Grave)",
         tier: 4,
     },
 
