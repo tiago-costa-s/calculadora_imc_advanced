@@ -30,7 +30,7 @@ const data = [
     {
         min: 25,
         max: 29.9,
-        classification: "Entre 30,0 a 34,9",
+        classification: "Entre 25 a 29,9",
         info: "Sobrepeso",
         obesity: "",
         tier: 2,
